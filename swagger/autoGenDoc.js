@@ -1,7 +1,7 @@
 const mongooseToSwagger = require('mongoose-to-swagger');
 const swaggerAutogen = require('swagger-autogen')({
     openapi: '3.0.0',
-    language: 'pt-BR'  // Corrigido aqui
+    language: 'pt-BR'  
 });
 
 const outputFile = './swagger_output.json';
