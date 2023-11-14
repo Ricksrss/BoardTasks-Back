@@ -19,16 +19,16 @@ let doc = {
             description: "Servidor localhost."
         },
         {
-            url: "board-tasks-back-iota.vercel.app",
+            url: "http://board-tasks-back-iota.vercel.app",
             description: "Servidor de produção."
-        }
+        }        
     ],
     consumes: ['application/json'],
     produces: ['application/json'],
 }
 
 swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
-    console.log("Documentação do Swagger gerada encontra-se no arquivo em: " + outputFile);  // Corrigido aqui
+    console.log("Documentação do Swagger gerada encontra-se em: " + outputFile);
     if (process.env.NODE_ENV !== 'production') {
         require("../index.js");
     }
